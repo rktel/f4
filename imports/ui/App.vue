@@ -6,6 +6,8 @@
 <script>
 export default {
     beforeCreate() {
+      console.log(localStorage.getItem("user"));
+
         localStorage.getItem("user")
             ? this.$router.push({ name: "F4" })
             : this.$router.push({ name: "Login" });
