@@ -8,7 +8,7 @@ export default {
     beforeCreate() {
       console.log(localStorage.getItem("user"));
 
-        localStorage.getItem("user") == 1
+        !!localStorage.getItem("user")
             ? this.$router.push({ name: "F4" })
             : this.$router.push({ name: "Login" });
     }
