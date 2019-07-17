@@ -6,7 +6,7 @@
 <script>
 export default {
   beforeCreate() {
-    Meteor.userId()
+    0
       ? this.$router.push({ name: "F4" })
       : this.$router.push({ name: "Login" });
   }
