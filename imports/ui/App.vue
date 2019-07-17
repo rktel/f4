@@ -40,10 +40,7 @@ body {
     align-items: center;
     height: 100%;
 }
-.form-login {
-    width: 380px;
-    height: 360px;
-}
+
 .button-xsmall {
     font-size: 70%;
 }
