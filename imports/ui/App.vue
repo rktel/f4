@@ -6,7 +6,7 @@
 <script>
 export default {
     beforeCreate() {
-        Meteor.call("checkUsername", localStorage.getItem("user"), (error, result) => {
+        Meteor.call("checkUsername", localStorage.getItem('userFigo4.0'), (error, result) => {
                 if (!error) {
                   if(!result){
                     this.$router.push({ name: "Login" })
