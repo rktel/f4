@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="pure-controls">
-                        <button type="submit" class="button-small pure-button">Ingresar</button>
+                        <button class="button-small pure-button">Ingresar</button>
                     </div>
                 </fieldset>
             </form>

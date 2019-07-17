@@ -41,8 +41,8 @@ body {
     height: 100%;
 }
 .form-login {
-    width: 360px;
-    height: 320px;
+    width: 380px;
+    height: 360px;
 }
 .button-xsmall {
     font-size: 70%;
