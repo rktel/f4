@@ -6,11 +6,10 @@
 <script>
 export default {
     beforeCreate() {
-      console.log(localStorage.getItem("user"));
-
-        !!localStorage.getItem("user")
-            ? this.$router.push({ name: "F4" })
-            : this.$router.push({ name: "Login" });
+        console.log(localStorage.getItem("user"));
+        localStorage.getItem("user") === 0
+            ? this.$router.push({ name: "Login" })
+            : this.$router.push({ name: "F4" });
     }
 };
 </script>
