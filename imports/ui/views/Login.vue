@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="pure-controls">
-                        <button class="button-small pure-button">Ingresar</button>
+                        <button class="button-small pure-button" @click.stop.prevent="onClickLogin">Ingresar</button>
                     </div>
                 </fieldset>
             </form>
@@ -23,7 +23,13 @@
 </template>
 
 <script>
-export default {};
+export default {
+    methods:{
+        onClickLogin(){
+            alert('Button pressed');
+        }
+    }
+};
 </script>
 
 <style>
