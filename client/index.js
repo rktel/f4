@@ -1,4 +1,5 @@
 import Vue from 'vue';
+Vue.config.productionTip = false;
 import VueMeteorTracker from 'vue-meteor-tracker';   // here!
 Vue.use(VueMeteorTracker);                           // here!
 
