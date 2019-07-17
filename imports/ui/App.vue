@@ -17,9 +17,7 @@ export default {
 html,body {
     height: 100vh !important;
 }
-#app {
-    height: 100vh !important;
-}
+
 .flex-container-login {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -39,6 +37,7 @@ html,body {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
+    height: 100%;
 }
 .form-login {
     width: 300px;
