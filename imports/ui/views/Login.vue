@@ -27,6 +27,7 @@ export default {
             if (username && password) {
                 Meteor.call("login", username, password, (error, user) => {
                     if (!error && user) {
+                        localStorage.setItem('user', user.username);
                         this.$router.push({ name: "F4" });
                     }
                 });
