@@ -14,8 +14,9 @@ export default {
 </script>
 
 <style scope>
-html,body {
-   /* height: 100vh !important; */
+html,
+body {
+    height: 100vh !important;
 }
 
 .flex-container-login {
