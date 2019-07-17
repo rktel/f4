@@ -25,12 +25,11 @@ export default {
         onClickLogin() {
             const { username, password } = this;
             if (username && password) {
-                Meteor.call("login", username, password, (error, user)=>{
-                    if(!error && user){
-                        console.log(user);
+                Meteor.call("login", username, password, (error, user) => {
+                    if (!error && user) {
+                        this.$router.push({ name: "F4" });
                     }
                 });
-                
             }
         }
     }
