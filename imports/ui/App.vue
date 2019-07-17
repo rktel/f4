@@ -1,5 +1,7 @@
 <template>
-    <h2>F4</h2>
+    <section>
+        <button>Start</button>
+    </section>
 </template>
 
 <script>
