@@ -4,17 +4,17 @@
             <form class="pure-form pure-form-aligned">
                 <fieldset>
                     <div class="pure-control-group">
-                        <label for="name">Username</label>
+                        <label for="name">Usuario</label>
                         <input id="name" type="text" />
                     </div>
 
                     <div class="pure-control-group">
-                        <label for="password">Password</label>
+                        <label for="password">Clave</label>
                         <input id="password" type="password"/>
                     </div>
 
                     <div class="pure-controls">
-                        <button type="submit" class="pure-button pure-button-primary">Submit</button>
+                        <button type="submit" class="button-small pure-button">Ingresar</button>
                     </div>
                 </fieldset>
             </form>

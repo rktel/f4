@@ -41,7 +41,7 @@ body {
     height: 100%;
 }
 .form-login {
-    width: 300px;
+    width: 360px;
     height: 320px;
 }
 .button-xsmall {
