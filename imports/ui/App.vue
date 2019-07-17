@@ -1,12 +1,16 @@
+    
 <template>
-  <section>
-    <button class="button-xsmall pure-button">A Pure Button</button>
-    <button class="button-small pure-button">A Pure Button</button>
-  </section>
+  <router-view></router-view>
 </template>
 
 <script>
-export default {};
+export default {
+  beforeCreate() {
+    Meteor.userId()
+      ? this.$router.push({ name: "F4" })
+      : this.$router.push({ name: "Login" });
+  }
+};
 </script>
 
 <style scope>
