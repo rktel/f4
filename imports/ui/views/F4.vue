@@ -9,7 +9,7 @@
 export default {
     methods: {
         logout() {
-            localStorage("user", 0);
+            localStorage.setItem("user", 0);
             this.$router.push({ name: "Login" });
         }
     }
