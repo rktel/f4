@@ -1,32 +1,23 @@
 <template>
     <section class="flex-container-login">
-  
-            <form class="form-login pure-form pure-form-aligned">
-                <fieldset>
-                    <div class="pure-control-group">
-                        <label for="name">Usuario</label>
-                        <input id="name" type="text" />
-                    </div>
+        <form class="pure-form">
+            <fieldset>
+                <legend>Figo</legend>
 
-                    <div class="pure-control-group">
-                        <label for="password">Clave</label>
-                        <input id="password" type="password"/>
-                    </div>
+                <input type="text" placeholder="Username" />
+                <input type="password" placeholder="Password" />
 
-                    <div class="pure-controls">
-                        <button class="button-small pure-button" @click.stop.prevent="onClickLogin">Ingresar</button>
-                    </div>
-                </fieldset>
-            </form>
- 
+                <button type="submit" class="button-small pure-button">Entrar</button>
+            </fieldset>
+        </form>
     </section>
 </template>
 
 <script>
 export default {
-    methods:{
-        onClickLogin(){
-            alert('Button pressed');
+    methods: {
+        onClickLogin() {
+            alert("Button pressed");
         }
     }
 };
