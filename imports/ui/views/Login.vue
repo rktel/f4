@@ -4,7 +4,7 @@
             <fieldset>
                 <legend>F4.0</legend>
 
-                <input type="text" placeholder="Usuario" v-model="username"/>
+                <input type="text" placeholder="Usuario" v-model="username" />
                 <input type="password" placeholder="Contraseña" v-model="password" />
 
                 <button class="button-small pure-button" @click.stop.prevent="onClickLogin">Entrar</button>
@@ -15,18 +15,22 @@
 
 <script>
 export default {
-    data(){
-        return{
-            username:null,
-            password:null
-        }
+    data() {
+        return {
+            username: null,
+            password: null
+        };
     },
     methods: {
         onClickLogin() {
-            const {username, password} = this
-            if(username && password){
-                const user = Meteor.call('login', username, password);
-                console.log(user);
+            const { username, password } = this;
+            if (username && password) {
+                Meteor.call("login", username, password, (error, user)=>{
+                    if(!error && user){
+                        console.log(user);
+                    }
+                });
+                
             }
         }
     }
