@@ -1,8 +1,8 @@
 import { Users } from '../../imports/api/collections';
 
 Meteor.methods({ 
-    login: function(username, password) { 
-         const user = Users.findOne({username, password});
+   async login: function(username, password) { 
+         const user = await Users.findOne({username, password});
          return user ? user: false;
     } 
 });
