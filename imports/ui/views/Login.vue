@@ -25,7 +25,8 @@ export default {
         onClickLogin() {
             const {username, password} = this
             if(username && password){
-                const verified = Meteor.call('login', username, password);
+                const user = Meteor.call('login', username, password);
+                console.log(user);
             }
         }
     }
