@@ -4,7 +4,7 @@ import VueMeteorTracker from 'vue-meteor-tracker';   // here!
 Vue.use(VueMeteorTracker);                           // here!
 
 import App from '../imports/ui/App.vue';
-import router from '../imports/api/route'
+import router from '../imports/api/router'
 
 Meteor.startup(() => {
   new Vue({
