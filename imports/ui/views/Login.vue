@@ -5,7 +5,7 @@
                 <legend>F4.0</legend>
 
                 <input type="text" placeholder="Usuario" v-model="username"/>
-                <input type="password" placeholder="Contraseña" v-model="password" @keyup.enter="onClickLogin"/>
+                <input type="password" placeholder="Contraseña" v-model="password" />
 
                 <button class="button-small pure-button" @click.stop.prevent="onClickLogin">Entrar</button>
             </fieldset>
