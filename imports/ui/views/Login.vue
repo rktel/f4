@@ -1,7 +1,7 @@
 <template>
     <section class="flex-container-login">
-        <div class="form-login">
-            <form class="pure-form pure-form-aligned">
+  
+            <form class="form-login pure-form pure-form-aligned">
                 <fieldset>
                     <div class="pure-control-group">
                         <label for="name">Usuario</label>
@@ -18,7 +18,7 @@
                     </div>
                 </fieldset>
             </form>
-        </div>
+ 
     </section>
 </template>
 
