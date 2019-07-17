@@ -1,5 +1,5 @@
 <template>
-    <section class="main-login">
+    <section class="flex-container-login">
         <div class="form-login">
             <button>Login</button>
         </div>
