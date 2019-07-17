@@ -4,7 +4,7 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter);
 
 import Login from '../ui/views/Login.vue';
-import F4 from '../ui/views/f4/F4.vue';
+import F4 from '../ui/views/F4.vue';
 
 const routes = [
     { path: '/login', component: Login, name: 'Login' },
