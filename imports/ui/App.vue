@@ -1,6 +1,7 @@
 <template>
   <section>
-    <button class="pure-button">A Pure Button</button>
+    <button class="button-xsmall pure-button">A Pure Button</button>
+    <button class="button-small pure-button">A Pure Button</button>
   </section>
 </template>
 
@@ -8,5 +9,12 @@
 export default {};
 </script>
 
-<style>
+<style scope>
+.button-xsmall {
+  font-size: 70%;
+}
+
+.button-small {
+  font-size: 85%;
+}
 </style>
