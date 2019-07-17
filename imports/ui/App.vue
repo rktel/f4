@@ -6,10 +6,16 @@
 <script>
 export default {
     beforeCreate() {
-        console.log(localStorage.getItem("user"));
-        localStorage.getItem("user") == 0
-            ? this.$router.push({ name: "Login" })
-            : this.$router.push({ name: "F4" });
+        Meteor.call("checkUsername", localStorage.getItem("user"), (error, result) => {
+                if (!error) {
+                  if(!result){
+                    this.$router.push({ name: "Login" })
+                  }else{
+                    this.$router.push({ name: "F4" });
+                  }
+                }
+            }
+        );
     }
 };
 </script>
