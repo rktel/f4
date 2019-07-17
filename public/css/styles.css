@@ -1,8 +1,13 @@
-.main_Login{
+.main-login{
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: stretch;
+}
+.form-login{
+    background-color: darkseagreen;
+    width: 300px;
+    height: 320px;
 }

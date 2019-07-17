@@ -1,6 +1,6 @@
 <template>
-    <section class="main_Login">
-        <div>
+    <section class="main-login">
+        <div class="form-login">
             <button>Login</button>
         </div>
     </section>
