@@ -1,13 +1,20 @@
 <template>
-    <h1>F4</h1>
+    <section>
+        <h1>F4</h1>
+        <button class="button-small pure-button" @click="logout">Logout</button>
+    </section>
 </template>
 
 <script>
 export default {
-
-}
+    methods: {
+        logout() {
+            localStorage("user", 0);
+            this.$router.push({ name: "Login" });
+        }
+    }
+};
 </script>
 
 <style>
-
 </style>
