@@ -14,8 +14,11 @@ export default {
 </script>
 
 <style scope>
-html, body {
-  height: 100vh !important;
+html,body {
+    height: 100vh !important;
+}
+#app {
+    height: 100vh !important;
 }
 .flex-container-login {
     display: -ms-flexbox;
@@ -37,9 +40,9 @@ html, body {
     -ms-flex-align: center;
     align-items: center;
 }
-.form-login{
-  width: 300px;
-  height: 320px;
+.form-login {
+    width: 300px;
+    height: 320px;
 }
 .button-xsmall {
     font-size: 70%;
