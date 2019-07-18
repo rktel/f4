@@ -27,7 +27,7 @@ export default {
     height: 100%;
 }
 .area-f4 nav{
-    height: 38px;
+    height: 31px;
     background-color: cornflowerblue;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -50,7 +50,7 @@ export default {
 }
 .content-f4 {
   /* Subtract the header size */
-  height: calc(100% - 38px);
+  height: calc(100% - 31px);
   overflow: auto;
 }
 </style>
