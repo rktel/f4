@@ -28,6 +28,7 @@ export default {
 }
 .area-f4 nav{
     height: 38px;
+    background-color: cornflowerblue;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
