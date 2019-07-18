@@ -7,13 +7,15 @@
                 <input type="text" placeholder="Usuario" v-model="username" />
                 <input type="password" placeholder="Contraseña" v-model="password" />
 
-                <button class="button-small pure-button" @click.stop.prevent="onClickLogin">Entrar</button>
+                <button class="button-small pure-button" @click.stop.prevent="login">Entrar</button>
             </fieldset>
         </form>
     </section>
 </template>
 
 <script>
+import { LOCAL_STORAGE_USERNAME } from '../../api/constants';
+
 export default {
     data() {
         return {
@@ -22,7 +24,7 @@ export default {
         };
     },
     methods: {
-        onClickLogin() {
+        login() {
             const { username, password } = this;
             if (username && password) {
                 Meteor.call("login", username, password, (error, user) => {
