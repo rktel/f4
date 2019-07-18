@@ -1,4 +1,3 @@
-import { Syrus } from '../server/gps/dct/syrus_adapter'
 import { Server } from './avl/avl-server'
 //----------------------CONSTANTES
 //#WORDS
@@ -114,9 +113,5 @@ main_getAllMobiles = () => {
 }
 
 Meteor.startup(() => {
-   // Meteor.call('devicesReset')
-   // Meteor.call('createHyperPersonal')
-   // Meteor.call('setEmailOptions')
-   new Syrus();
    new Server(TAIP_PORT, TAIP_HOST);
 })
