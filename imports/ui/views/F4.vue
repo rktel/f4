@@ -6,7 +6,10 @@
 </template>
 
 <script>
+import { LOCAL_STORAGE_USERNAME } from '../../api/constants';
+
 export default {
+    name:'F4',
     methods: {
         logout() {
             localStorage.setItem(LOCAL_STORAGE_USERNAME, 0);

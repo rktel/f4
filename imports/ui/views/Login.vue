@@ -17,6 +17,7 @@
 import { LOCAL_STORAGE_USERNAME } from '../../api/constants';
 
 export default {
+    name:'Login',
     data() {
         return {
             username: null,

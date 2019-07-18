@@ -4,7 +4,10 @@
 </template>
 
 <script>
+import { LOCAL_STORAGE_USERNAME } from '../api/constants';
+
 export default {
+    name:'App',
     beforeCreate() {
         Meteor.call("checkUsername", localStorage.getItem(LOCAL_STORAGE_USERNAME), (error, result) => {
                 if (!error) {
