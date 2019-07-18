@@ -4,7 +4,10 @@
             <button class="button-xsmall pure-button" disabled>F4</button>
             <button class="button-xsmall pure-button" @click="logout">Logout</button>
         </nav>
-
+        <section class="content-f4">
+            <div class="item1">ONE</div>
+            <div class="item2">TWO</div>
+        </section>
     </section>
 </template>
 
@@ -51,5 +54,30 @@ export default {
   /* Subtract the header size */
   height: calc(100% - 25px);
   overflow: auto;
+  display: flex;
+  flex-direction: row;
+  align-content: stretch;
 }
+.content-f4 div.item1{
+            flex: 3 1;
+            order: 0;
+            align-self: stretch;
+}
+.content-f4 div.item2{
+            flex: 7 1;
+            order: 0;
+            align-self: stretch;
+}
+@media only screen and (max-width: 900px) {
+    .content-f4 {
+          flex-direction: column;
+    }
+    .content-f4 div.item1 {
+        flex: 1 1 auto;
+    }
+    .content-f4 div.item2{
+        flex: 1 1 auto;
+    }
+}
+
 </style>
