@@ -1,7 +1,7 @@
 <template>
     <section class="area-f4">
         <nav>
-        <span>F4</span>
+        <button class="button-small pure-button" disabled>F4</button>
         <button class="button-small pure-button" @click="logout">Logout</button>
         </nav>
 
