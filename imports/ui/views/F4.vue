@@ -67,6 +67,7 @@ export default {
             flex: 7 1;
             order: 0;
             align-self: stretch;
+            background-color: gainsboro;
 }
 @media only screen and (max-width: 900px) {
     .content-f4 {
