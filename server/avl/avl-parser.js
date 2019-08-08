@@ -18,6 +18,8 @@ function TAIP(pdu) {
             mobileID, appVersion: APP_VERSION, mobileProtocol: TAIP_PROTOCOL_HB,serverTime
         };
         Meteor.call('insertReport', data);
+        Meteor.call('saveMobileID', mobileID);
+   
     } else {
         // pdu
         mobileID = pdu.substring(pdu.indexOf(TAIP_INIT_MOBILEID) + 3, pdu.indexOf(TAIP_INIT_MOBILEID) + 3 + 15);
@@ -28,6 +30,7 @@ function TAIP(pdu) {
             mobileID, appVersion: APP_VERSION, mobileProtocol: TAIP_PROTOCOL,serverTime, rawData
         };
         Meteor.call('insertReport', data);
+        Meteor.call('saveMobileID', mobileID);
     }
 
     if (mobileID) {

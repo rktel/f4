@@ -21,9 +21,13 @@ Meteor.methods({
     getAllMobiles: function () {
         return main_getAllMobiles();
     },
+    saveMobileID: function(mobileID){
+        Mobiles.update({mobileID},{$set:{mobileID}},{upsert:true});
+    }
+    /*
     setMobiles: function (indexSock, arrayMobileID) {
         Mobiles.update({sockID:indexSock},{$push:{ mobiles: {$each: arrayMobileID} }},{upsert:true});
-    }
+    }*/
 });
 
 

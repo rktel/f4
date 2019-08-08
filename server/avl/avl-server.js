@@ -38,23 +38,25 @@ export function Server(port, host) {
                 const SOCK_MASTER = main_getSOCK(sockIndex);
 
                 // mobileID exist on SOCK_MASTER! 
+                /*
                 if (SOCK_MASTER && SOCK_MASTER.find(element => { if (element) { return element.mobileID === mobileID } })) {
                     const elementIndex = SOCK_MASTER.findIndex(element => { if (element) { return element.mobileID === mobileID } });
                     if (elementIndex >= 0) {
                         sock.mobileID = mobileID;
                         SOCK_MASTER[elementIndex] = sock;
-                        // Prepare to CLient
+                        
                         const AUX = SOCK_MASTER.map(el => el.mobileID);
                         Meteor.call('setMobiles', sockIndex, AUX);
                     }
                 }
+                */
                 // mobileID No exist on SOCK_MASTER! 
                 if (SOCK_MASTER && !SOCK_MASTER.find(element => { if (element) { return element.mobileID === mobileID } })) {
                     sock.mobileID = mobileID;
                     SOCK_MASTER.push(sock);
                     // Prepare to CLient
-                    const AUX = SOCK_MASTER.map(el => el.mobileID);
-                    Meteor.call('setMobiles', sockIndex, AUX);
+                    //const AUX = SOCK_MASTER.map(el => el.mobileID);
+                    //Meteor.call('setMobiles', sockIndex, AUX);
                 }
                 // Send ACK to device
                 sock.write(mobileID);
@@ -70,8 +72,8 @@ export function Server(port, host) {
             const elementIndex = SOCK_MASTER.findIndex(element => element.mobileID == mobileID);
             SOCK_MASTER.splice(elementIndex, 1);
             // Prepare to CLient
-            const AUX = SOCK_MASTER.map(el => el.mobileID);
-            Meteor.call('setMobiles', sockIndex, AUX);
+            //const AUX = SOCK_MASTER.map(el => el.mobileID);
+            //Meteor.call('setMobiles', sockIndex, AUX);
         }));
         //on sockt error
         sock.on('error', function (err) {
