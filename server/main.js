@@ -1,5 +1,7 @@
 import { Server } from './avl/avl-server'
 //----------------------CONSTANTES
+//#Socket.io
+SOCKET_IO_PORT = 584
 //#WORDS
 APP_VERSION = "4.0";
 TAIP_INIT_MOBILEID = "ID=";

@@ -1,0 +1,1 @@
+const io = require('socket.io')(SOCKET_IO_PORT);
