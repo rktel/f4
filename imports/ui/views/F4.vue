@@ -16,7 +16,7 @@ import { LOCAL_STORAGE_USERNAME } from "../../api/constants";
 
 export default {
   name: "F4",
-  beforeCreate() {
+  created() {
     socketio.on("message", function(message) {
       alert("The server has a message for you: " + message);
     });

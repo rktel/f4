@@ -59,7 +59,7 @@ main_cleanSOCKS = () => {
     SOCKS_9 = [];
 };
 main_getAllMobiles = () => {
-    let allMobileID = 'pepa';
+    let allMobileID = [];
     if (SOCKS_0.length > 0) {
         SOCKS_0.forEach(element => {
             allMobileID.push(element.mobileID);
