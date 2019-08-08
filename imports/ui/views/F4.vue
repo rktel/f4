@@ -18,13 +18,9 @@ export default {
   name: "F4",
   created() {
     socketio.on("message", function(message) {
-      alert("The server has a message for you: " + message);
+      console.log("The server has a message for you: " + message);
     });
-    Meteor.call("getAllMobiles", (error, mobiles) => {
-      if (!error) {
-        console.log(mobiles);
-      }
-    });
+
   },
   methods: {
     logout() {
