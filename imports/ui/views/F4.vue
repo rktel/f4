@@ -17,7 +17,7 @@ import { LOCAL_STORAGE_USERNAME } from "../../api/constants";
 export default {
   name: "F4",
   beforeCreate() {
-    socket.on("message", function(message) {
+    socketio.on("message", function(message) {
       alert("The server has a message for you: " + message);
     });
     Meteor.call("getAllMobiles", (error, mobiles) => {
