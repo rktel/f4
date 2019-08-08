@@ -1,5 +1,10 @@
 //#Socket.io
 //const SOCKET_IO_PORT = 80;
-const io = require('socket.io')(2019);
+const io = require('socket.io');
+const serverio = io.listen(8000);
 
-io.sockets.emit('message', 'You are connected!');
+serverio.on("connection", (socket) => {
+    console.info(`Client connected [id=${socket.id}]`);
+    // initialize this client's sequence number
+
+});
