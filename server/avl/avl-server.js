@@ -9,6 +9,7 @@ export function Server(port, host) {
     svr.listen(port, host, () => {
         console.log('TCP Server is running on port ' + port + '.');
         setInterval(ls => {
+            /*
             console.log(`Conexiones en SOCKS_0: ${SOCKS_0.length}`);
             console.log(`Conexiones en SOCKS_1: ${SOCKS_1.length}`);
             console.log(`Conexiones en SOCKS_2: ${SOCKS_2.length}`);
@@ -18,6 +19,7 @@ export function Server(port, host) {
             console.log(`Conexiones en SOCKS_6: ${SOCKS_6.length}`);
             console.log(`Conexiones en SOCKS_7: ${SOCKS_7.length}`);
             console.log(`Conexiones en SOCKS_8: ${SOCKS_8.length}`);
+        */
             console.log(`Conexiones en SOCKS_9: ${SOCKS_9.length}`);
         }, 60 * 1000);
     });
