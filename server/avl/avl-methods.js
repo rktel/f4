@@ -21,8 +21,8 @@ Meteor.methods({
     getAllMobiles: function () {
         return main_getAllMobiles();
     },
-    saveMobileID: function(mobileID){
-        Mobiles.update({mobileID},{$set:{mobileID}},{upsert:true});
+    updateMobileID: function(mobileTrace){
+        Mobiles.update({mobileID: mobileTrace.mobileID},{$set:mobileTrace},{upsert:true});
     }
     /*
     setMobiles: function (indexSock, arrayMobileID) {

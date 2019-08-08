@@ -18,7 +18,10 @@ function TAIP(pdu) {
             mobileID, appVersion: APP_VERSION, mobileProtocol: TAIP_PROTOCOL_HB,serverTime
         };
         Meteor.call('insertReport', data);
-        Meteor.call('saveMobileID', mobileID);
+        const mobileTrace = {
+            mobileID, updateTime: serverTime
+        }
+        Meteor.call('updateMobileID', mobileTrace);
    
     } else {
         // pdu
@@ -30,7 +33,10 @@ function TAIP(pdu) {
             mobileID, appVersion: APP_VERSION, mobileProtocol: TAIP_PROTOCOL,serverTime, rawData
         };
         Meteor.call('insertReport', data);
-        Meteor.call('saveMobileID', mobileID);
+        const mobileTrace = {
+            mobileID, updateTime: serverTime
+        }
+        Meteor.call('updateMobileID', mobileTrace);
     }
 
     if (mobileID) {
