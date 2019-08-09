@@ -10,6 +10,9 @@
            <tbody>
             <tr v-for="mobile in mobiles" :key="mobile">
               <td>{{mobile}}</td>
+              <td><button class="button-xsmall pure-button">&#9655;</button></td>
+              <td><button class="button-xsmall pure-button">&#9678;</button></td>
+              <td><button class="button-xsmall pure-button">&#9673;</button></td>
             </tr>
           </tbody>
         </table>
