@@ -14,7 +14,7 @@
 <script>
 import { LOCAL_STORAGE_USERNAME } from "../../api/constants";
 const PORT = 8080;
-const SOCKET;
+let SOCKET;
 
 export default {
   name: "F4",
