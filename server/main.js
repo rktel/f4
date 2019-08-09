@@ -10,6 +10,7 @@ TAIP_PROTOCOL = 'TAIP';
 TAIP_PROTOCOL_HB = 'TAIP_HEARTBEAT';
 //----------------------VARIABLES
 //#SOCKETS
+SOCKET_IO;
 SOCKS_0 = [];
 SOCKS_1 = [];
 SOCKS_2 = [];
@@ -112,7 +113,26 @@ main_getAllMobiles = () => {
     }
     return allMobileID;
 }
+//******  SOCKET.IO
+import http from 'http';
+import socket_io from 'socket.io';
 
+const PORT = 8080;
+const serverIO = http.createServer();
+SOCKET_IO = socket_io(server);
+
+// New client
+SOCKET_IO.on('connection', function (socket) {
+    const mobiles = main_getAllMobiles();
+    socket.emit('mobiles', mobiles);
+});
+
+// METEOR STARTUP
 Meteor.startup(() => {
-   new Server(TAIP_PORT, TAIP_HOST);
+    new Server(TAIP_PORT, TAIP_HOST);
+    try {
+        serverIO.listen(PORT);
+    } catch (e) {
+        console.error(e);
+    }
 })
