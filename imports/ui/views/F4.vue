@@ -90,6 +90,8 @@ export default {
   flex: 3 1;
   order: 0;
   align-self: stretch;
+  height: calc(100% - 25px);
+  overflow: auto;
 }
 .content-f4 div.item2 {
   flex: 7 1;
