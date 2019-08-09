@@ -17,14 +17,14 @@ import { LOCAL_STORAGE_USERNAME } from "../../api/constants";
 export default {
   name: "F4",
   created() {
-    // Hack https://github.com/socketio/socket.io-client/issues/961
+ /*
     import Response from "meteor-node-stubs/node_modules/http-browserify/lib/response";
     if (!Response.prototype.setEncoding) {
       Response.prototype.setEncoding = function(encoding) {
         // do nothing
       };
     }
-
+*/
     // Socket io client
     const PORT = 8080;
     let socket = require("socket.io-client")(`http://localhost:${PORT}`);
