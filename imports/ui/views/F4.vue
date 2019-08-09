@@ -14,11 +14,12 @@
 <script>
 import { LOCAL_STORAGE_USERNAME } from "../../api/constants";
 const PORT = 8080;
-SOCKET = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
+const SOCKET;
 
 export default {
   name: "F4",
   created() {
+    SOCKET = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
     SOCKET.on("mobiles", function(mobiles){
       console.log(mobiles);
     });
