@@ -13,6 +13,7 @@ function TAIP(pdu) {
         // heartbeat
         mobileID = pdu;
         sockIndex = mobileID[mobileID.length - 1];
+        // prepare data
         const serverTime = new Date().toISOString();
         const data = {
             mobileID, appVersion: APP_VERSION, mobileProtocol: TAIP_PROTOCOL_HB,serverTime
@@ -28,6 +29,7 @@ function TAIP(pdu) {
         mobileID = pdu.substring(pdu.indexOf(TAIP_INIT_MOBILEID) + 3, pdu.indexOf(TAIP_INIT_MOBILEID) + 3 + 15);
         sockIndex = mobileID[mobileID.length - 1];
         rawData = pdu.trim();
+        // prepare data
         const serverTime = new Date().toISOString();
         const data = {
             mobileID, appVersion: APP_VERSION, mobileProtocol: TAIP_PROTOCOL,serverTime, rawData
