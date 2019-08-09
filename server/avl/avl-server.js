@@ -44,7 +44,7 @@ export function Server(port, host) {
                     //const AUX = SOCK_MASTER.map(el => el.mobileID);
                     //Meteor.call('setMobiles', sockIndex, AUX);
                     const mobiles = main_getAllMobiles();
-                    console.log(SOCKET_IO);
+                    SOCKET_IO.emit('mobiles', mobiles);
                 }
                 // Send ACK to device
                 sock.write(mobileID);
