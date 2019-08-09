@@ -22,7 +22,7 @@ export default {
   name: "F4",
   created() {
     SOCKET = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
-    SOCKET.on("mobiles", function(mobiles) {
+    SOCKET.on("mobiles", (mobiles)=> {
       console.log(mobiles);
       this.mobiles = mobiles;
     });

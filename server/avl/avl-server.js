@@ -67,15 +67,18 @@ export function Server(port, host) {
         }));
         // on sock close
         sock.on('close',  Meteor.bindEnvironment(() =>{
-            console.log('Closed sock', sock.mobileID);
-            const mobileID = sock.mobileID;
-            const sockIndex = mobileID[mobileID.length - 1];
-            const SOCK_MASTER = main_getSOCK(sockIndex);
-            const elementIndex = SOCK_MASTER.findIndex(element => element.mobileID == mobileID);
-            SOCK_MASTER.splice(elementIndex, 1);
-            // Prepare to CLient
-            //const AUX = SOCK_MASTER.map(el => el.mobileID);
-            //Meteor.call('setMobiles', sockIndex, AUX);
+            if(sock && sock.mobileID){
+                console.log('Closed sock', sock.mobileID);
+                const mobileID = sock.mobileID;
+                const sockIndex = mobileID[mobileID.length - 1];
+                const SOCK_MASTER = main_getSOCK(sockIndex);
+                const elementIndex = SOCK_MASTER.findIndex(element => element.mobileID == mobileID);
+                SOCK_MASTER.splice(elementIndex, 1);
+                // Prepare to CLient
+                //const AUX = SOCK_MASTER.map(el => el.mobileID);
+                //Meteor.call('setMobiles', sockIndex, AUX);
+            }
+
         }));
         //on sockt error
         sock.on('error', function (err) {
