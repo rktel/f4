@@ -5,7 +5,9 @@
       <button class="button-xsmall pure-button" @click="logout">Logout</button>
     </nav>
     <section class="content-f4">
-      <div class="item1">ONE</div>
+      <div class="item1">
+        <li v-for="mobile in mobiles" :key="mobile">{{mobile}}</li>
+      </div>
       <div class="item2">TWO</div>
     </section>
   </section>
@@ -20,8 +22,9 @@ export default {
   name: "F4",
   created() {
     SOCKET = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
-    SOCKET.on("mobiles", function(mobiles){
+    SOCKET.on("mobiles", function(mobiles) {
       console.log(mobiles);
+      this.mobiles = mobiles;
     });
     SOCKET.on("connect", function() {
       console.log("Client connected");
@@ -29,6 +32,11 @@ export default {
     SOCKET.on("disconnect", function() {
       console.log("Client disconnected");
     });
+  },
+  data(){
+    return{
+      mobiles:[]
+    }
   },
   methods: {
     logout() {
