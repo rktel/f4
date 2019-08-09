@@ -107,11 +107,11 @@ export default {
   }
   .content-f4 div.item1 {
     flex: 1 1 auto;
-    height: calc(50% - 25px);
+    height: calc(50% - 2px);
   }
   .content-f4 div.item2 {
     flex: 1 1 auto;
-    height: calc(50% - 25px);
+    height: calc(50% - 2px);
   }
 }
 </style>
