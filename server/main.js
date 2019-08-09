@@ -10,7 +10,7 @@ TAIP_PROTOCOL = 'TAIP';
 TAIP_PROTOCOL_HB = 'TAIP_HEARTBEAT';
 //----------------------VARIABLES
 //#SOCKETS
-SOCKET_IO;
+SOCKET_IO = {};
 SOCKS_0 = [];
 SOCKS_1 = [];
 SOCKS_2 = [];
