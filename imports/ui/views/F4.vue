@@ -6,7 +6,13 @@
     </nav>
     <section class="content-f4">
       <div class="item1">
-        <li v-for="mobile in mobiles" :key="mobile">{{mobile}}</li>
+        <table class="pure-table pure-table-horizontal">
+           <tbody>
+            <tr v-for="mobile in mobiles" :key="mobile">
+              <td>{{mobile}}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       <div class="item2">TWO</div>
     </section>
@@ -22,7 +28,7 @@ export default {
   name: "F4",
   created() {
     SOCKET = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
-    SOCKET.on("mobiles", (mobiles)=> {
+    SOCKET.on("mobiles", mobiles => {
       console.log(mobiles);
       this.mobiles = mobiles;
     });
@@ -33,10 +39,10 @@ export default {
       console.log("Client disconnected");
     });
   },
-  data(){
-    return{
-      mobiles:[]
-    }
+  data() {
+    return {
+      mobiles: []
+    };
   },
   methods: {
     logout() {
