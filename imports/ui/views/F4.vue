@@ -98,6 +98,8 @@ export default {
   order: 0;
   align-self: stretch;
   background-color: gainsboro;
+  height: calc(100% - 25px);
+  overflow: auto;
 }
 @media only screen and (max-width: 900px) {
   .content-f4 {
@@ -105,9 +107,11 @@ export default {
   }
   .content-f4 div.item1 {
     flex: 1 1 auto;
+    height: calc(50% - 25px);
   }
   .content-f4 div.item2 {
     flex: 1 1 auto;
+    height: calc(50% - 25px);
   }
 }
 </style>
