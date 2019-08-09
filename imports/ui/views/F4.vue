@@ -7,12 +7,17 @@
     <section class="content-f4">
       <div class="item1">
         <table class="pure-table pure-table-horizontal">
-           <tbody>
+          <tbody>
             <tr v-for="mobile in mobiles" :key="mobile">
-              <td>{{mobile}}</td>
-              <td><button class="pure-button">&#9655;</button></td>
-              <td><button class="pure-button">&#9678;</button></td>
-              <td><button class="pure-button">&#9673;</button></td>
+              <td>
+                <label>
+                  <input type="checkbox" />
+                  {{mobile}}
+                </label>
+              </td>
+              <td>
+                <button class="pure-button">&#9655;</button>
+              </td>
             </tr>
           </tbody>
         </table>
