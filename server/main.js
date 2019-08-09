@@ -119,7 +119,7 @@ import socket_io from 'socket.io';
 
 const PORT = 8080;
 const serverIO = http.createServer();
-SOCKET_IO = socket_io(server);
+SOCKET_IO = socket_io(serverIO);
 
 // New client
 SOCKET_IO.on('connection', function (socket) {
