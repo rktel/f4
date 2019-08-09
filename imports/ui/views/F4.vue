@@ -27,7 +27,7 @@ export default {
 */
     // Socket io client
     const PORT = 8080;
-    let socket = require("socket.io-client")(`http://localhost:${PORT}`);
+    let socket = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
 
     socket.on("connect", function() {
       console.log("Client connected");
