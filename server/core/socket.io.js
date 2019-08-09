@@ -8,11 +8,10 @@ Meteor.startup(() => {
   const server = http.createServer();
   const io = socket_io(server);
 
-  let counter = 0;
-
-  // New client
+    // New client
   io.on('connection', function(socket) {
-    console.log('new socket client');
+    const mobiles = main_getAllMobiles();
+    socket.emit('mobiles', mobiles);
   });
 
   // Start server

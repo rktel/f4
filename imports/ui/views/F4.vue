@@ -13,26 +13,19 @@
 
 <script>
 import { LOCAL_STORAGE_USERNAME } from "../../api/constants";
+const PORT = 8080;
+SOCKET = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
 
 export default {
   name: "F4",
   created() {
- /*
-    import Response from "meteor-node-stubs/node_modules/http-browserify/lib/response";
-    if (!Response.prototype.setEncoding) {
-      Response.prototype.setEncoding = function(encoding) {
-        // do nothing
-      };
-    }
-*/
-    // Socket io client
-    const PORT = 8080;
-    let socket = require("socket.io-client")(`http://10.12.1.80:${PORT}`);
-
-    socket.on("connect", function() {
+    SOCKET.on("mobiles", function(mobiles){
+      console.log(mobiles);
+    });
+    SOCKET.on("connect", function() {
       console.log("Client connected");
     });
-    socket.on("disconnect", function() {
+    SOCKET.on("disconnect", function() {
       console.log("Client disconnected");
     });
   },
